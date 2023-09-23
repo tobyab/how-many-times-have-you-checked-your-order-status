@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "How many times have you checked your phone's preorder status?",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "permissions": ["storage", "tabs", "webRequest", "webRequestBlocking", "<all_urls>"],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.store.apple.com/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
