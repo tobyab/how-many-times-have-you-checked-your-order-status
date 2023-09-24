@@ -12,10 +12,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       sendResponse({ count });
     });
     return true;
-  } else if (message.action === 'updatePopup') {
-    visitCount = message.count;
-    chrome.action.setPopup({ popup: 'hello.html' });
   }
 });
-
-console.log('background.js loaded');
